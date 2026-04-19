@@ -1,0 +1,36 @@
+# Compiled executables
+*.exe
+*.out
+*.app
+Final_thesis
+
+# Object files
+*.o
+*.obj
+*.os
+*.a
+*.lib
+*.so
+*.dylib
+
+# IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Build directories
+build/
+cmake-build-*/
+dist/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Data files (user data)
+users.txt
+library.txt
+library_backup.txt
