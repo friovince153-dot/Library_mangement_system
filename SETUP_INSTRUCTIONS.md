@@ -60,7 +60,7 @@ git push -u origin main
 
 #### **Windows:**
 ```bash
-git clone https://github.com/friovince153.dot/Library_management_system.git
+git clone https://github.com/friovince153-dot/Library_management_system.git
 cd library-management-system
 mkdir build
 cd build
@@ -71,7 +71,7 @@ cmake --build .
 
 #### **Linux:**
 ```bash
-git clone https://github.com/friovince153.dot/Library_management_system.git
+git clone https://github.com/friovince153-dot/Library_management_system.git
 cd library-management-system
 mkdir build
 cd build
@@ -82,7 +82,7 @@ make
 
 #### **macOS:**
 ```bash
-git clone https://github.com/friovince153.dot/Library_management_system.git
+git clone https://github.com/friovince153-dot/Library_management_system.git
 cd library-management-system
 mkdir build
 cd build
