@@ -13,6 +13,7 @@ extern vector<Book> library; // dynamic array of books in the library, declared 
 void addBook();
 void displayBooks();
 void borrowBook();
+void deleteBook();
 void returnBook();
 void searchBook();
 void saveToFile();
