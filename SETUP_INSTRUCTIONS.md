@@ -22,7 +22,7 @@
 ### Step 3: GitHub will show you commands
 You'll see something like:
 ```
-git remote add origin https://github.com/YOUR_USERNAME/Library_management_system.git
+git remote add origin https://github.com/<YOUR_USERNAME>/Library_management_system.git
 git branch -M main
 git push -u origin main
 ```
@@ -34,15 +34,23 @@ git push -u origin main
 ### Open PowerShell and run:
 
 ```powershell
-Example folder directory:
+Example folder directory(use your own folder directory):
 cd "C:\Users\WIN11\Documents\.vscode\sem 2\Final_project"
 ```
 
 ### Add GitHub remote:
 ```powershell
-git remote add origin https://github.com/YOUR_USERNAME/Library_management_system.git
+git remote add origin https://github.com/<YOUR_USERNAME>/Library_management_system.git
 ```
-*(Replace YOUR_USERNAME with your actual GitHub username)*
+*(Replace <YOUR_USERNAME> with your actual GitHub username)*
+
+### Initialize Git (if it was not initialized in the first place)
+```powershell
+git init
+git remote add origin https://github.com/<YOUR_USERNAME>/Library_management_system.git
+git add .
+git commit -m "Initial commit"
+```
 
 ### Rename branch to main:
 ```powershell
@@ -66,7 +74,7 @@ git push -u origin main
 
 #### **Windows:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/Library_management_system.git
+git clone https://github.com/<YOUR_USERNAME>/Library_management_system.git
 cd Library_management_system
 mkdir build
 cd build
@@ -77,7 +85,7 @@ cmake --build .
 
 #### **Linux:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/Library_management_system.git
+git clone https://github.com/<YOUR_USERNAME>/Library_management_system.git
 cd Library_management_system
 mkdir build
 cd build
@@ -88,7 +96,7 @@ make
 
 #### **macOS:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/Library_management_system.git
+git clone https://github.com/<YOUR_USERNAME>/Library_management_system.git
 cd Library_management_system
 mkdir build
 cd build
@@ -135,7 +143,7 @@ Library_management_system/
 When you make changes to your code:
 
 ```powershell
-Example folder directory:
+Example folder directory(use your own folder directory):
 cd "C:\Users\WIN11\Documents\.vscode\sem 2\Final_project"
 
 git add .                               # Stage changes
@@ -161,7 +169,7 @@ git push                                # Upload to GitHub
 ### "Remote already exists"
 ```powershell
 git remote remove origin
-git remote add origin https://github.com/YOUR_USERNAME/Library_management_system.git
+git remote add origin https://github.com/<YOUR_USERNAME>/Library_management_system.git
 ```
 
 ### "Permission denied"
@@ -173,13 +181,22 @@ git remote add origin https://github.com/YOUR_USERNAME/Library_management_system
 - Make sure `.gitignore` exists in project root
 - Run `git status` to see what will be uploaded
 
+### Resetting the CMake build
+- If the CMake build got really messy then run:
+```bash
+rm -rf build
+mkdir build
+cd build
+cmake ..
+```
+
 ---
 
 ## VERIFY IT WORKS
 
 ### From your current folder:
 ```powershell
-Example folder directory: 
+Example folder directory(use your own folder directory): 
 cd "C:\Users\WIN11\Documents\.vscode\sem 2\Final_project"
 git status
 ```
@@ -191,7 +208,7 @@ nothing to commit, working tree clean
 ```
 
 ### Visit GitHub:
-Go to: `https://github.com/YOUR_USERNAME/Library_management_system`
+Go to: `https://github.com/<YOUR_USERNAME>/Library_management_system`
 
 You should see all your source files! ✓
 
