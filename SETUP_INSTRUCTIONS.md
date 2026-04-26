@@ -1,14 +1,19 @@
 # Step-by-Step Instructions
 
-## PART 1: Create GitHub Repository
+### Pre-requisites:
+- CMake
+- C++ Compiler
+- VS Code (or your preferred editor)
+
+## PART 1: Create a new GitHub Repository
 
 ### Step 1: Go to GitHub.com
 1. Visit https://github.com
 2. Sign in (or create account if needed)
 
 ### Step 2: Create New Repository
-1. Click **+** icon (top right) → **New repository**
-2. Give it a name: `library-management-system`
+1. Click on the **+** icon (top right) → **New repository**
+2. Give it a name: `Library_management_system`
 3. Add description: `C++ Library Management System with Login`
 4. Choose **Public** (so others can access)
 5. **IMPORTANT**: Do NOT check "Add a README" or ".gitignore" (we already have them)
@@ -17,7 +22,7 @@
 ### Step 3: GitHub will show you commands
 You'll see something like:
 ```
-git remote add origin https://github.com/YOUR_USERNAME/library-management-system.git
+git remote add origin https://github.com/YOUR_USERNAME/Library_management_system.git
 git branch -M main
 git push -u origin main
 ```
@@ -29,12 +34,13 @@ git push -u origin main
 ### Open PowerShell and run:
 
 ```powershell
-cd "C:\Users\WIN11\Documents\.vscode\sem 2\final project"
+Example folder directory:
+cd "C:\Users\WIN11\Documents\.vscode\sem 2\Final_project"
 ```
 
 ### Add GitHub remote:
 ```powershell
-git remote add origin https://github.com/YOUR_USERNAME/library-management-system.git
+git remote add origin https://github.com/YOUR_USERNAME/Library_management_system.git
 ```
 *(Replace YOUR_USERNAME with your actual GitHub username)*
 
@@ -60,8 +66,8 @@ git push -u origin main
 
 #### **Windows:**
 ```bash
-git clone https://github.com/friovince153-dot/Library_management_system.git
-cd library-management-system
+git clone https://github.com/YOUR_USERNAME/Library_management_system.git
+cd Library_management_system
 mkdir build
 cd build
 cmake ..
@@ -71,8 +77,8 @@ cmake --build .
 
 #### **Linux:**
 ```bash
-git clone https://github.com/friovince153-dot/Library_management_system.git
-cd library-management-system
+git clone https://github.com/YOUR_USERNAME/Library_management_system.git
+cd Library_management_system
 mkdir build
 cd build
 cmake ..
@@ -82,14 +88,15 @@ make
 
 #### **macOS:**
 ```bash
-git clone https://github.com/friovince153-dot/Library_management_system.git
-cd library-management-system
+git clone https://github.com/YOUR_USERNAME/Library_management_system.git
+cd Library_management_system
 mkdir build
 cd build
 cmake ..
 make
 ./bin/Final_thesis
 ```
+*If the executable did not end up in the "\bin\" folder by default then please check in "build/Debug/" and run the executable.
 
 ---
 
@@ -98,7 +105,7 @@ make
 After pushing, GitHub will show:
 
 ```
-library-management-system/
+Library_management_system/
 ├── Book.cpp
 ├── Book.h
 ├── Library.cpp
@@ -112,6 +119,14 @@ library-management-system/
 ```
 
 **NO `.exe` files** (they're in .gitignore - clean!)
+```
+# Typical C++ ignores
+/build/
+/.vscode/
+*.exe
+*.o
+*.obj
+```
 
 ---
 
@@ -120,7 +135,8 @@ library-management-system/
 When you make changes to your code:
 
 ```powershell
-cd "C:\Users\WIN11\Documents\.vscode\sem 2\final project"
+Example folder directory:
+cd "C:\Users\WIN11\Documents\.vscode\sem 2\Final_project"
 
 git add .                               # Stage changes
 git commit -m "Fixed bug in search"    # Describe what changed
@@ -145,12 +161,13 @@ git push                                # Upload to GitHub
 ### "Remote already exists"
 ```powershell
 git remote remove origin
-git remote add origin https://github.com/YOUR_USERNAME/library-management-system.git
+git remote add origin https://github.com/YOUR_USERNAME/Library_management_system.git
 ```
 
 ### "Permission denied"
 - GitHub may ask for authentication
 - Use GitHub Personal Access Token (Settings → Developer settings → Personal access tokens)
+
 
 ### Files still showing on GitHub
 - Make sure `.gitignore` exists in project root
@@ -162,7 +179,8 @@ git remote add origin https://github.com/YOUR_USERNAME/library-management-system
 
 ### From your current folder:
 ```powershell
-cd "C:\Users\WIN11\Documents\.vscode\sem 2\final project"
+Example folder directory: 
+cd "C:\Users\WIN11\Documents\.vscode\sem 2\Final_project"
 git status
 ```
 
@@ -173,7 +191,7 @@ nothing to commit, working tree clean
 ```
 
 ### Visit GitHub:
-Go to: `https://github.com/YOUR_USERNAME/library-management-system`
+Go to: `https://github.com/YOUR_USERNAME/Library_management_system`
 
 You should see all your source files! ✓
 
