@@ -85,9 +85,10 @@ void showMenu()
     cout << "| 3. Borrow Book                    |" << endl;
     cout << "| 4. Return Book                    |" << endl;
     cout << "| 5. Search Book                    |" << endl;
-    cout << "| 6. Save to File                   |" << endl;
-    cout << "| 7. Load from File                 |" << endl;
-    cout << "| 8. Exit                           |" << endl;
+    cout << "| 6. Delete Book                    |" << endl;
+    cout << "| 7. Save to File                   |" << endl;
+    cout << "| 8. Load from File                 |" << endl;
+    cout << "| 9. Exit                           |" << endl;
     cout << "=====================================" << endl;
     cout << "Enter choice: ";
 }
@@ -200,10 +201,10 @@ int main()
                     break;
             } while (true);
             break;
-        case 6:
+         case 6:
             do
             {
-                saveToFile();
+                deleteBook();
                 cout << "Repeat? (y/n): ";
                 char ch;
                 cin >> ch;
@@ -214,7 +215,7 @@ int main()
         case 7:
             do
             {
-                loadFromFile();
+                saveToFile();
                 cout << "Repeat? (y/n): ";
                 char ch;
                 cin >> ch;
@@ -223,13 +224,25 @@ int main()
             } while (true);
             break;
         case 8:
+            do
+            {
+                loadFromFile();
+                cout << "Repeat? (y/n): ";
+                char ch;
+                cin >> ch;
+                if (ch == 'n' || ch == 'N')
+                    break;
+            } while (true);
+            break;
+        case 9:
             saveToFile(); // Save library data to file before exiting
             cout << "Exiting...\n";
             break;
         default:
             cout << "Invalid choice!\n";
         }
-        if (choice != 8)
+        
+        if (choice != 9)
         {
             cout << "\nPress ENTER to continue...";
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -238,6 +251,6 @@ int main()
         } /* system("cls"); // for Windows, but using ANSI escape codes for better compatibility and because system("cls") is not recommended
            for security reasons */
 
-    } while (choice != 8);
+    } while (choice != 9);
     return 0;
 }
