@@ -114,6 +114,14 @@ int main()
         cout << "Choice: ";
         cin >> choice;
 
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(numeric.limits<streamsize>::max(), '\n');
+            cout << "Invalid choice! Please enter a number.\n\n";
+            continue;
+        }
+
         if (choice == 1)
         {
             if (loginUser())
