@@ -139,6 +139,31 @@ void searchBook()
     }
 }
 
+//Delete book for cases like the book got lost, destroyed, or to just be deleted from the library.
+void deleteBook();
+{
+    int id;
+    cout << "Enter Book ID: ";
+    while (!(cin >>id))
+    {
+        cout << "Invalid input. Enter a valid numeric Book ID: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
+    for (auto it = library.begin(); it != library.end(); ++it)
+    {
+        if (it->id == id)
+        {
+            library.erase(it);
+            saveToFile(); //save after deleting
+            cout << "Book deleted!\n";
+            return;
+        }
+    }
+    cout << "Book not found.\n";
+}
+    
 /* Save to File saves the current state of the library to a text file named "library.txt" which changes every
 time the user adds, borrows, returns, or searches for a book, allowing the library data to persist between program runs.*/
 void saveToFile()
